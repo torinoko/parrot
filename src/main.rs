@@ -8,11 +8,12 @@ fn main() {
     loop {
         input.clear();
         io::stdin().read_line(&mut input).expect("入力エラー");
-        println!("{}", input);
 
         let word = input.trim();
         if word.starts_with("bye") {
+            println!("Goodbye! See you again!");
             process::exit(0);
         }
+        println!("{}", word);
     }
 }
